@@ -12,3 +12,12 @@
 
       steps:
         - run: echo "👋 Hello World"
+        - name: checkout
+          uses: actions/checkout@v4.1.5
+        - name: List files in repo
+          run: |
+            echo "the repository ${{ github.repository }} contains the following files " 
+            tree
+            
+
+
